@@ -1,0 +1,3 @@
+/media/paolo/VERSIONED-BOX/EDX-Courses/Enrolled/Self-Driving-Nanodegree-Udacity/CarND-MPC-Project/build/CMakeFiles/edit_cache.dir
+/media/paolo/VERSIONED-BOX/EDX-Courses/Enrolled/Self-Driving-Nanodegree-Udacity/CarND-MPC-Project/build/CMakeFiles/rebuild_cache.dir
+/media/paolo/VERSIONED-BOX/EDX-Courses/Enrolled/Self-Driving-Nanodegree-Udacity/CarND-MPC-Project/build/CMakeFiles/mpc.dir
