@@ -87,7 +87,6 @@ int main(int argc, char* argv[]) {
   uWS::Hub h;
   // MPC is initialized here!
   MPC mpc;
-  //cout << setw(15) << "x" << setw(15) << "y" << setw(15) << "psi" << setw(15) << "v" << setw(15) << "cte" << setw(15) << "epsi" << endl;
 
   h.onMessage([&mpc](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
                      uWS::OpCode opCode) {
@@ -95,7 +94,6 @@ int main(int argc, char* argv[]) {
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
     string sdata = string(data).substr(0, length);
-    //cout << sdata << endl;
     if (sdata.size() > 2 && sdata[0] == '4' && sdata[1] == '2') {
       string s = hasData(sdata);
       if (s != "") {
@@ -123,7 +121,7 @@ int main(int argc, char* argv[]) {
         	  ptsyXd(i) = (ptsx[i]-px)*sinpsi + (ptsy[i]-py)*cospsi;
           }
 
-          // Estimation of desired trajectory by 3d degree polynomial fitting (2 degree might be enough for this track?)
+          // Estimation of desired trajectory by 3d degree polynomial fitting
           auto coeffs = polyfit(ptsxXd, ptsyXd, 3);
 
           // New state estimation with Latency Compensation
@@ -180,11 +178,10 @@ int main(int argc, char* argv[]) {
           // forcibly slowing down the car just before a turn , but the error of the last few points of the predicted trajectory is increased.
           // A lower cte weight reduces this error but affects negatively the tracking performance, especially in the second part of turns.
           //
-          // ?? more owrk needed ;-)
 
           vector<double> mpc_x_vals;
           vector<double> mpc_y_vals;
-          for (size_t i=7;i<13;i++){  // Last three points of the predicted trajectory aren't displayed
+          for (size_t i=7;i<13;i++){
         	  mpc_x_vals.push_back(vars[i]);
         	  mpc_y_vals.push_back(vars[i+N]);
 
@@ -205,7 +202,7 @@ int main(int argc, char* argv[]) {
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           // Latency
           // The purpose is to mimic real driving conditions where
-          // the car does actuate the commands instantly.
+          // the car does not actuate the commands instantly.
           //
           this_thread::sleep_for(chrono::milliseconds(100));
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);

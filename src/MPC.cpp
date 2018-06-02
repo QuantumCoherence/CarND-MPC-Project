@@ -5,7 +5,7 @@
 
 using CppAD::AD;
 
-size_t N = 10;
+size_t N =  10;
 double dt = 0.1; //unstabl at shorter time steps
 
 // This is the length from front to CoG that has a similar radius.
