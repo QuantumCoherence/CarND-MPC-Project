@@ -1,4 +1,4 @@
-# MOC Project
+# MPC Project
 ## GitHub Repo
 [CarND-MPC-Project](https://github.com/QuantumCoherence/CarND-MPC-Project)
 
@@ -52,14 +52,12 @@ Lf is a parameter used to describe the specific vehicle modeled.
 
  with a higher value parameter will get a stable vehicle control response at faster speed than displayed here.
 
-####Video and Images
+#### Video and Images
 
 **Video**
 Download the videoscreen capture of an entire loop around the track in ziped form, gunzip and play.
-This is the outcome using following paramters 
-> Max_Speed 35
 
-[PID MPC Video Download from here]()
+[PID MPC Video Download from here](https://github.com/QuantumCoherence/CarND-MPC-Project/blob/master/vokoscreen-2018-06-02_09-26-10.mkv.gz)
 
 **Images**
 
