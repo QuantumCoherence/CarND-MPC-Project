@@ -44,14 +44,13 @@ where
 
 - *dt* is the duration of the time interval
 - ![equation](http://www.sciweavers.org/tex2img.php?eq=\delta&fc=Black&im=jpg&fs=12&ff=arev&edit=)  is the steering control input
-- ![equation](http://www.sciweavers.org/tex2img.php?eq=a&fc=Black&im=jpg&fs=12&ff=arev&edit=) is the forward acceleration/breaking control input
-- e ![equation](http://www.sciweavers.org/tex2img.php?eq=\psi des&fc=Black&im=jpg&fs=12&ff=arev&edit=) is the desired orientation of the vehicle
+- ![equation](http://www.sciweavers.org/tex2img.php?eq=a&fc=Black&im=jpg&fs=12&ff=arev&edit=)  is the forward acceleration/breaking control input
+- e ![equation](http://www.sciweavers.org/tex2img.php?eq=\psi des&fc=Black&im=jpg&fs=12&ff=arev&edit=)  is the desired orientation of the vehicle
 
-Lf is a parameter used to describe the specific vehicle modeled.
+Lf describes the distance between the rear wheel axel and the forward steering wheels, which is specific of the vehicle modeled and affects how the steering control input changes the vehicle orientation during motion.
 
 
- with a higher value parameter will get a stable vehicle control response at faster speed than displayed here.
-
+ 
 #### Video and Images
 
 **Video**
