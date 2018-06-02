@@ -26,7 +26,7 @@ The model used to estimate the vehicle control inputs is based on the model dicu
 where 
 
 - X and Y are the position in global coordinates
-- ![equation](http://www.sciweavers.org/tex2img.php?eq=\psi&fc=Black&im=jpg&fs=12&ff=arev&edit=)  is the orientation of the vehicle
+- ![equation](http://www.sciweavers.org/tex2img.php?eq=a&fc=Black&im=jpg&fs=12&ff=arev&edit=)  is the orientation of the vehicle
 - ![equation](http://www.sciweavers.org/tex2img.php?eq=v&fc=Black&im=jpg&fs=12&ff=arev&edit=) is the forward speed
 - *cte* is the crosstrack error
 - e ![equation](http://www.sciweavers.org/tex2img.php?eq=\psi&fc=Black&im=jpg&fs=12&ff=arev&edit=) is the orientation error
